@@ -4,6 +4,7 @@
   "dependencies": {},
   "repository": {},
   "devDependencies": {
+    "cordova": "^4.2.0",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^2.0.0",
     "grunt-concurrent": "^1.0.0",
@@ -18,6 +19,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "^0.6.0",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-cordova-ng": "^0.2.4",
     "grunt-filerev": "^2.1.2",
     "grunt-google-cdn": "^0.4.3",
     "grunt-karma": "^0.10.1",
