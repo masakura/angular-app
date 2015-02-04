@@ -446,7 +446,7 @@ module.exports = function (grunt) {
     'karma'
   ]);
 
-  grunt.registerTask('build', [
+  grunt.registerTask('buildweb', [
     'clean:dist',
     'wiredep',
     'useminPrepare',
@@ -468,4 +468,25 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('cordova-build', ['cordova:package']);
+
+  grunt.registerTask('cordova-emulate', ['cordova:emulate']);
+
+  grunt.registerTask('cordova-run', ['cordova:run']);
+
+  grunt.registerTask('cordova-compile', ['cordova:compile']);
+
+  grunt.registerTask('cordova-prepare', ['cordova:prepare']);
+
+  grunt.registerTask('build', ['buildweb', 'cordova-build']);
+
+  grunt.registerTask('emulate', ['buildweb', 'cordova-emulate']);
+
+  grunt.registerTask('run', ['buildweb', 'cordova-run']);
+
+  grunt.registerTask('compile', ['buildweb', 'cordova-compile']);
+
+  grunt.registerTask('prepare', ['buildweb', 'cordova-prepare']);
+
 };
